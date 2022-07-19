@@ -4,13 +4,73 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex"/>
     <meta name="robots" content="nofollow"/>
+    <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
-    <title>電卓</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link rel="icon" href="./img/calculate.png" type="image/png" id="fav">
+    <title>2158149 最終課題</title>
 </head>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.cjs.js"
-        integrity="sha512-2e2aXOh4/FgkCAUyurkjk0Uw4m1gPcExFwb1Ai4Ajjg97se/FEWfrLG1na4mq8cgOzouc8qLIqsh0EGksPGdqQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div id="main">
+    <form name="calculator" id="calc">
+        <table>
+            <!-- ディスプレイ -->
+            <tr>
+                <td colspan="4"><label><input type="text" name="display" id="output" value="" disabled></label></td>
+            </tr>
+            <!--  1段目  -->
+            <tr>
+                <td><label><input type="button" value="7" name="7" id="button_7" class="button" onclick="get_number(7)"></label>
+                </td>
+                <td><label><input type="button" value="8" name="8" id="button_8" class="button" onclick="get_number(8)"></label>
+                </td>
+                <td><label><input type="button" value="9" name="9" id="button_9" class="button" onclick="get_number(9)"></label>
+                </td>
+                <td><label><input type="button" value="backspace" name="del" id="button_del"
+                                  class="button operator material-symbols-outlined"
+                                  onclick="del_num()"></label>
+                </td>
+            </tr>
+            <!--  2段目  -->
+            <tr>
+                <td><label><input type="button" value="4" name="4" id="button_4" class="button" onclick="get_number(4)"></label>
+                </td>
+                <td><label><input type="button" value="5" name="5" id="button_5" class="button" onclick="get_number(5)"></label>
+                </td>
+                <td><label><input type="button" value="6" name="6" id="button_6" class="button" onclick="get_number(6)"></label>
+                </td>
+                <td><label><input type="button" value="+" name="addition" id="button_addition" class="button operator"
+                                  onclick="set_operator()"></label>
+            </tr>
+            <!--  3段目  -->
+            <tr>
+                <td><label><input type="button" value="1" name="1" id="button_1" class="button" onclick="get_number(1)"></label>
+                </td>
+                <td><label><input type="button" value="2" name="2" id="button_2" class="button" onclick="get_number(2)"></label>
+                </td>
+                <td><label><input type="button" value="3" name="3" id="button_3" class="button" onclick="get_number(3)"></label>
+                </td>
+                <td><label><input type="button" value="00" name="mul_10" id="button_mul_10" class="button"
+                                  onclick="get_number(10)"></label></td>
+            </tr>
+            <!--  4段目  -->
+            <tr>
+                <td><label><input type="button" value="0" name="0" id="button_0" class="button" onclick="get_number(0)"></label>
+                </td>
+                <td><label><input type="button" value="restart_alt" name="clear" id="button_clear"
+                                  class="button operator material-symbols-outlined" onclick="clear_date()"></label></td>
+                <td><label><input type="button" value="=" name="=" id="button_equal" class="button operator"
+                                  onclick="get_ans()"></label>
+                </td>
+                <td><label><input type="button" value="text_fields" name="text_fields" id="text_fields"
+                                  onclick="change_font()" class="button operator material-symbols-outlined"></label>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
 
 </body>
 </html>
